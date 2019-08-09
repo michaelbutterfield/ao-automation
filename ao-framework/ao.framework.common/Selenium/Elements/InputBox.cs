@@ -1,10 +1,9 @@
 ﻿using OpenQA.Selenium;
 using System;
 
-namespace training.automation.common.Selenium.Elements
+namespace ao.framework.common.Selenium.Elements
 {
-    using Common;
-    using Tests;
+    using common.Elements.Common;
 
     public class InputBox : Element
     {
@@ -26,8 +25,6 @@ namespace training.automation.common.Selenium.Elements
         public void SendKeys(string text)
         {
             string stepDescription = string.Format("Input Text '{0}' into element {1} on page {2}", text, name, pageName);
-
-            TestLogger.CreateTestStep(stepDescription);
 
             int retries = 0;
             bool sentKeysSuccess = false;

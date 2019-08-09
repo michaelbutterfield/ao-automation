@@ -1,12 +1,12 @@
 ﻿using OpenQA.Selenium;
 using System;
 
-namespace training.automation.common.Selenium.Elements
+namespace ao.framework.common.Selenium.Elements
 {
-    using Common;
+    using common.Elements.Common;
 
     public class Image : Element
     {
-        public Image(By myLocator, String elementName, String pageName) : base(myLocator, elementName, pageName) { }
+        public Image(By myLocator, string elementName, string pageName) : base(myLocator, elementName, pageName) { }
     }
 }

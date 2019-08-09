@@ -1,8 +1,8 @@
 ﻿using OpenQA.Selenium;
 
-namespace training.automation.common.Selenium.Elements
+namespace ao.framework.common.Selenium.Elements
 {
-    using Common;
+    using common.Elements.Common;
 
     public class Button : Element
     {

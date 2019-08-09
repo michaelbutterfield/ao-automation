@@ -2,8 +2,6 @@
 
 namespace training.automation.common.Utilities
 {
-    using Tests;
-
     public class RuntimeTestData
     {
         private static Dictionary<string, object> TestData;
@@ -45,7 +43,6 @@ namespace training.automation.common.Utilities
 
         public static void Destroy()
         {
-            TestLogger.CreateTestStep("Runtime Test Data Destroyed");
             TestData.Clear();
         }
     }

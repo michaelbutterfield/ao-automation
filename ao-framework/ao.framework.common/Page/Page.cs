@@ -1,7 +1,7 @@
-﻿namespace training.automation.common.Page
+﻿namespace ao.framework.common.Page
 {
     using NHamcrest;
-    using Utilities;
+    using training.automation.common.Utilities;
 
     public abstract class Page
     {

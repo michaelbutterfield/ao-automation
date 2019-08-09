@@ -1,4 +1,6 @@
-﻿using System;
+﻿using NHamcrest;
+using NHamcrest.Core;
+using System;
 using System.Threading;
 
 namespace training.automation.common.Utilities
