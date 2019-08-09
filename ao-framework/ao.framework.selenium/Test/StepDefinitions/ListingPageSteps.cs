@@ -13,12 +13,14 @@ namespace ao.framework.selenium.Test.StepDefinitions
         [When]
         public void I_select_the_specific_brand_P0(string BrandFilter)
         {
+            DesktopWebsite.ListingPage.ShowAllProducts.WaitUntilExists();
+
             RuntimeTestData.Add("Brand", BrandFilter);
 
             string Brand = BrandFilter.ToLower();
-            string CompleteXpath = string.Format("//li[@id='fv_{0}']", Brand);
-
-            DesktopWebsite.ListingPage.FilterByBrand(CompleteXpath);
+            string FilterXpath = string.Format("//li[@id='fv_{0}']/a", Brand);
+            
+            DesktopWebsite.ListingPage.FilterByBrand(FilterXpath);
         }
 
         [Then]

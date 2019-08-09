@@ -99,7 +99,7 @@ namespace ao.framework.common.Elements.Common
 
             try
             {
-                elementText = GetWebElement(false, true).ToString();
+                elementText = GetWebElement(false, true).GetAttribute("innerText").ToString();
             }
             catch (Exception e)
             {

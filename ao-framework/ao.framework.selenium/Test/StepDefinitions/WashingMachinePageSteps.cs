@@ -13,8 +13,15 @@ namespace ao.framework.selenium.Test.StepDefinitions
         {
             RuntimeTestData.Add("Colour", "Silver");
 
-            DesktopWebsite.WashingMachinePage.SilverFilterOption.Click();
-            DesktopWebsite.WashingMachinePage.ShopNow.Click();
+            if (DesktopWebsite.WashingMachinePage.SilverFilterOption.Exists())
+            {
+                DesktopWebsite.WashingMachinePage.SilverFilterOption.Click();
+                DesktopWebsite.WashingMachinePage.ShopNow.Click();
+            }
+            else if (DesktopWebsite.ListingPage.ShowAllProducts.Exists())
+            {
+                DesktopWebsite.ListingPage.SilverFilterOption.Click();
+            }
         }
     }
 }
