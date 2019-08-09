@@ -6,7 +6,7 @@ namespace ao.framework.selenium.Test.StepDefinitions
     using common.Utilities;
 
     [Binding]
-    public sealed class AOExampleTest
+    public sealed class AOHomePageSteps
     {
         [Given]
         public void I_navigate_to_the_AO_home_page()

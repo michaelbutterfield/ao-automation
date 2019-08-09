@@ -90,7 +90,7 @@
     <Compile Include="Application\Pages\ListingPage.cs" />
     <Compile Include="Application\Pages\WashingMachinePage.cs" />
     <Compile Include="Test\Runner\TestRunner.cs" />
-    <Compile Include="Test\StepDefinitions\AOExampleTest.cs" />
+    <Compile Include="Test\StepDefinitions\AOHomePageSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Test\StepDefinitions\ListingPageSteps.cs" />
     <Compile Include="Test\StepDefinitions\WashingMachinePageSteps.cs" />
