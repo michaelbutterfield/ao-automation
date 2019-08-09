@@ -5,7 +5,7 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
 
-namespace training.automation.common.Utilities
+namespace ao.framework.common.Utilities
 {
     public class SeleniumHelper
     { 

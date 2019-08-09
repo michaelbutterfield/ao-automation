@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Linq;
 using OpenQA.Selenium;
+using NHamcrest;
+using OpenQA.Selenium.Support.UI;
 using ExpectedConditions = SeleniumExtras.WaitHelpers.ExpectedConditions;
 
 namespace ao.framework.common.Elements.Common
 {
-    using OpenQA.Selenium.Support.UI;
-    using training.automation.common.Utilities;
+    using Utilities;
 
     public class Element
     {
@@ -20,6 +21,23 @@ namespace ao.framework.common.Elements.Common
             name = myElementName;
             pageName = myPageName;
         }
+
+        public void AssertElementTextContains(string containsText)
+        {
+            string assertionDescription = string.Format("Assert Element {0} Text Contains {1}", name, containsText);
+
+            try
+            {
+                string fullText = GetElementText();
+                Console.WriteLine(fullText);
+                TestHelper.AssertThat(fullText, Contains.String(containsText), assertionDescription);
+            }
+            catch (Exception e)
+            {
+                HandleException(assertionDescription, e);
+            }
+        }
+
 
         public void AssertExists()
         {
@@ -73,6 +91,23 @@ namespace ao.framework.common.Elements.Common
             return SeleniumHelper.GetWebDriver().FindElements(locator).Count();
         }
 
+        public string GetElementText()
+        {
+            string assertionDesc = string.Format("Getting element text from element {0} on page {1}", name, pageName);
+
+            string elementText = null;
+
+            try
+            {
+                elementText = GetWebElement(false, true).ToString();
+            }
+            catch (Exception e)
+            {
+                HandleException("Get Element Text", e);
+            }
+
+            return elementText;
+        }
 
         protected void HandleException(string actionName, Exception ex)
         {

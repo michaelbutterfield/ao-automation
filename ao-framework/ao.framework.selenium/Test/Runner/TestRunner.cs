@@ -1,8 +1,9 @@
 ﻿using TechTalk.SpecFlow;
-using training.automation.common.Utilities;
 
 namespace ao.framework.selenium.Test.Runner
 {
+    using common.Utilities;
+
     [Binding]
     public class TestRunner
     {
@@ -16,13 +17,11 @@ namespace ao.framework.selenium.Test.Runner
             }
 
             SeleniumHelper.Initialise("chrome");
-            SeleniumHelper.GoToUrl("https://ao.com");
         }
 
         [AfterScenario]
         static void AfterScenario()
         {
-
             SeleniumHelper.DestroyDriver();
             RuntimeTestData.Destroy();
         }

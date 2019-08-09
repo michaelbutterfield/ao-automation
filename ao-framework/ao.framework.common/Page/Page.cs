@@ -1,7 +1,7 @@
 ﻿namespace ao.framework.common.Page
 {
+    using Utilities;
     using NHamcrest;
-    using training.automation.common.Utilities;
 
     public abstract class Page
     {
@@ -17,16 +17,6 @@
                 string actualSiteTitle = SeleniumHelper.GetWebDriver().Title;
                 string StepDesc = string.Format("Assert that Expected Site Title: {0} is equal to Actual Site Title: {1}", expectedTitle, actualSiteTitle);
                 TestHelper.AssertThat(expectedTitle, Is.EqualTo(actualSiteTitle), StepDesc);
-        }
-    }
-
-    public abstract class Popup
-    {
-        protected string name;
-
-        protected Popup(string name)
-        {
-            this.name = name;
         }
     }
 

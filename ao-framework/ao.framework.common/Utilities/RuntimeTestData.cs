@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace training.automation.common.Utilities
+namespace ao.framework.common.Utilities
 {
     public class RuntimeTestData
     {

@@ -3,7 +3,7 @@ using NHamcrest.Core;
 using System;
 using System.Threading;
 
-namespace training.automation.common.Utilities
+namespace ao.framework.common.Utilities
 {
     public static class TestHelper
     {

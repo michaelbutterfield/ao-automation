@@ -7,9 +7,9 @@ namespace ao.framework.selenium.Application.Sections
 
     public class Header : Section
     {
-        public Button Add { get; private set; }
-        public Image BackToHome { get; private set; }
-        public Image TrelloLogoHome { get; private set; }
+        public InputBox SearchBox { get; private set; }
+        public Button SearchButton { get; private set; }
+        public Image SiteLogo { get; private set; }
 
         public Header() : base("Header")
         {
@@ -18,9 +18,9 @@ namespace ao.framework.selenium.Application.Sections
 
         private void BuildSections()
         {
-            Add = new Button(By.XPath("//span[@name='add']"), "Header +", name);
-            BackToHome = new Image(By.XPath("//span[@name='house']"), "Back to Home", name);
-            TrelloLogoHome = new Image(By.XPath("//a[@href='/' and @class='_2eXs5ruz0QfFdH']"), "Trello Logo Home", name);
+            SearchBox = new InputBox(By.Id("searchAOL"), "Search Box", name);
+            SearchButton = new Button(By.XPath("//a[@aria-label='Search products']"), "Magnifying Glass Search", name);
+            SiteLogo = new Image(By.XPath("//div[@class='aoSiteLogoLink']"), "AO Header Logo", name);
         }
     }
 }

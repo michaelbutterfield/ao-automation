@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using System.Text;
 
-namespace training.automation.common.Utilities
+namespace ao.framework.common.Utilities
 {
     public class RandomGen
     {

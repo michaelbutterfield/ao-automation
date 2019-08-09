@@ -2,9 +2,11 @@
 {
     using Pages;
 
-    class DesktopWebsite
+    public class DesktopWebsite
     {
-        public static BoardsPage BoardsPage { get; private set; }
+        public static AOHomePage AOHomePage { get; private set; }
+        public static ListingPage ListingPage { get; private set; }
+        public static WashingMachinePage WashingMachinePage { get; private set; }
 
         static DesktopWebsite()
         {
@@ -13,7 +15,9 @@
 
         private static void BuildPages()
         {
-            BoardsPage = new BoardsPage();
+            AOHomePage = new AOHomePage();
+            ListingPage = new ListingPage();
+            WashingMachinePage = new WashingMachinePage();
         }
     }
 }
